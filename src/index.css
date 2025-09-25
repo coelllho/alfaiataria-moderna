@@ -20,40 +20,40 @@
     --popover: 24 24 27;
     --popover-foreground: 249 250 251;
 
-    /* Brand colors - Original white buttons */
-    --primary: 248 250 252;
-    --primary-foreground: 9 9 11;
-    --primary-glow: 255 255 255;
-    --primary-dark: 229 231 235;
+    /* Brand colors - Pure white */
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 4%;
+    --primary-glow: 0 0% 100%;
+    --primary-dark: 0 0% 90%;
 
     /* Secondary - Dark surface */
-    --secondary: 15 15 18;
-    --secondary-foreground: 249 250 251;
+    --secondary: 0 0% 6%;
+    --secondary-foreground: 0 0% 98%;
 
     /* Muted colors */
-    --muted: 24 24 27;
-    --muted-foreground: 255 255 255;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 100%;
 
-    /* Accent */
-    --accent: 24 24 27;
-    --accent-foreground: 249 250 251;
+    /* Accent - Pure white */
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 4%;
 
     /* Status colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 249 250 251;
+    --destructive-foreground: 0 0% 98%;
     --success: 142 76% 36%;
-    --success-foreground: 249 250 251;
+    --success-foreground: 0 0% 98%;
 
     /* Border and input */
-    --border: 255 255 255;
-    --input: 24 24 27;
-    --ring: 248 250 252;
+    --border: 0 0% 100%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 100%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(248 250 252), hsl(255 255 255));
-    --gradient-dark: linear-gradient(135deg, hsl(9 9 11), hsl(15 15 18));
-    --gradient-surface: linear-gradient(135deg, hsl(24 24 27 / 0.8), hsl(24 24 27 / 0.9));
-    --gradient-hero: linear-gradient(135deg, hsl(9 9 11 / 0.7), hsl(24 24 27 / 0.3));
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 95%));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
+    --gradient-surface: linear-gradient(135deg, hsl(0 0% 10% / 0.8), hsl(0 0% 10% / 0.9));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4% / 0.7), hsl(0 0% 10% / 0.3));
 
     /* Shadows - Original project shadows */
     --shadow-luxury: 0 20px 45px rgba(0, 0, 0, 0.28);
@@ -184,5 +184,5 @@
 
 @keyframes glow {
   from { box-shadow: var(--shadow-glow); }
-  to { box-shadow: 0 0 80px hsl(45 100% 70% / 0.4); }
+  to { box-shadow: 0 0 80px hsl(0 0% 100% / 0.4); }
 }
