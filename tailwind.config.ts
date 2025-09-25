@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: "hsl(var(--border) / 0.08)",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -39,7 +39,7 @@ export default {
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
+          foreground: "hsl(var(--muted-foreground) / 0.88)",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
@@ -54,8 +54,8 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         surface: {
-          glass: "hsl(var(--surface-glass))",
-          elevated: "hsl(var(--surface-elevated))",
+          glass: "var(--surface-glass)",
+          elevated: "var(--surface-elevated)",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

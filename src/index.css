@@ -7,64 +7,64 @@
 
 @layer base {
   :root {
-    /* Dark luxury palette */
-    --background: 222 84% 4%;
-    --foreground: 60 9% 98%;
+    /* Dark luxury palette - Original Project Colors */
+    --background: 9 9 11;
+    --foreground: 249 250 251;
 
     /* Surface colors */
-    --card: 222 84% 5%;
-    --card-foreground: 60 9% 98%;
-    --surface-glass: 222 84% 6%;
-    --surface-elevated: 222 84% 8%;
+    --card: 24 24 27;
+    --card-foreground: 249 250 251;
+    --surface-glass: rgba(24, 24, 27, 0.78);
+    --surface-elevated: rgba(39, 39, 42, 0.9);
 
-    --popover: 222 84% 5%;
-    --popover-foreground: 60 9% 98%;
+    --popover: 24 24 27;
+    --popover-foreground: 249 250 251;
 
-    /* Brand colors - Luxury gold accent */
-    --primary: 45 100% 70%;
-    --primary-foreground: 222 84% 4%;
-    --primary-glow: 45 100% 85%;
-    --primary-dark: 45 100% 60%;
+    /* Brand colors - Original white buttons */
+    --primary: 248 250 252;
+    --primary-foreground: 9 9 11;
+    --primary-glow: 255 255 255;
+    --primary-dark: 229 231 235;
 
-    /* Secondary - Elegant white */
-    --secondary: 60 9% 98%;
-    --secondary-foreground: 222 84% 4%;
+    /* Secondary - Dark surface */
+    --secondary: 15 15 18;
+    --secondary-foreground: 249 250 251;
 
     /* Muted colors */
-    --muted: 222 84% 10%;
-    --muted-foreground: 60 5% 70%;
+    --muted: 24 24 27;
+    --muted-foreground: 255 255 255;
 
-    /* Accent - Warm gold */
-    --accent: 45 100% 70%;
-    --accent-foreground: 222 84% 4%;
+    /* Accent */
+    --accent: 24 24 27;
+    --accent-foreground: 249 250 251;
 
     /* Status colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 60 9% 98%;
+    --destructive-foreground: 249 250 251;
     --success: 142 76% 36%;
-    --success-foreground: 60 9% 98%;
+    --success-foreground: 249 250 251;
 
     /* Border and input */
-    --border: 222 84% 11%;
-    --input: 222 84% 11%;
-    --ring: 45 100% 70%;
+    --border: 255 255 255;
+    --input: 24 24 27;
+    --ring: 248 250 252;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(45 100% 70%), hsl(45 100% 85%));
-    --gradient-dark: linear-gradient(135deg, hsl(222 84% 4%), hsl(222 84% 8%));
-    --gradient-surface: linear-gradient(135deg, hsl(222 84% 5% / 0.8), hsl(222 84% 8% / 0.9));
-    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4% / 0.7), hsl(222 84% 6% / 0.3));
+    --gradient-primary: linear-gradient(135deg, hsl(248 250 252), hsl(255 255 255));
+    --gradient-dark: linear-gradient(135deg, hsl(9 9 11), hsl(15 15 18));
+    --gradient-surface: linear-gradient(135deg, hsl(24 24 27 / 0.8), hsl(24 24 27 / 0.9));
+    --gradient-hero: linear-gradient(135deg, hsl(9 9 11 / 0.7), hsl(24 24 27 / 0.3));
 
-    /* Shadows */
-    --shadow-luxury: 0 25px 50px -12px hsl(222 84% 4% / 0.4);
-    --shadow-glow: 0 0 50px hsl(45 100% 70% / 0.3);
-    --shadow-card: 0 10px 30px -5px hsl(222 84% 4% / 0.6);
+    /* Shadows - Original project shadows */
+    --shadow-luxury: 0 20px 45px rgba(0, 0, 0, 0.28);
+    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.1);
+    --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.28);
 
     /* Animations */
     --transition-luxury: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --radius: 0.75rem;
+    --radius: 1.5rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -109,9 +109,11 @@
 }
 
 @layer components {
-  /* Glass morphism effect */
+  /* Glass morphism effect - Original project glass */
   .glass {
-    @apply backdrop-blur-xl bg-surface-glass/80 border border-white/10;
+    @apply backdrop-blur-xl border;
+    background: rgba(24, 24, 27, 0.78);
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   /* Luxury gradient backgrounds */

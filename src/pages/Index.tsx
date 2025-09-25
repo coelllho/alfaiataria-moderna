@@ -13,6 +13,14 @@ import productsImage from '@/assets/products-image.jpg';
 import experienceImage from '@/assets/experience-image.jpg';
 import appointmentImage from '@/assets/appointment-image.jpg';
 
+// Import service images
+import ajustesImage from '@/assets/service-ajustes.jpg';
+import remodelageImage from '@/assets/service-remodelagem.jpg';
+import sobMedidaImage from '@/assets/service-sob-medida.jpg';
+import atendimentoImage from '@/assets/service-atendimento.jpg';
+import consultoriaIAImage from '@/assets/service-consultoria-ia.jpg';
+import outrasCidadesImage from '@/assets/service-outras-cidades.jpg';
+
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -80,22 +88,52 @@ const Index = () => {
         backgroundImage={servicesImage}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card title="Ajustes de roupas" delay={100}>
+          <Card 
+            title="Ajustes de roupas" 
+            delay={100}
+            image={ajustesImage}
+            imageAlt="Ajustes de roupas sob medida"
+          >
             <p>Readequamos suas peças às medidas corretas para caimento perfeito.</p>
           </Card>
-          <Card title="Remodelagem" delay={150}>
+          <Card 
+            title="Remodelagem" 
+            delay={150}
+            image={remodelageImage}
+            imageAlt="Remodelagem de peças"
+          >
             <p>Refazemos a modelagem com suas medidas: desmontamos e reconstruímos a peça.</p>
           </Card>
-          <Card title="Sob medida personalizado" delay={200}>
+          <Card 
+            title="Sob medida personalizado" 
+            delay={200}
+            image={sobMedidaImage}
+            imageAlt="Confecção sob medida"
+          >
             <p>Confecção completa sob medida: tecidos, botões, forros, monograma e detalhes internos.</p>
           </Card>
-          <Card title="Atendimento personalizado" delay={250}>
+          <Card 
+            title="Atendimento personalizado" 
+            delay={250}
+            image={atendimentoImage}
+            imageAlt="Atendimento personalizado"
+          >
             <p>No ateliê, a domicílio ou no local de trabalho. Agendamentos flexíveis.</p>
           </Card>
-          <Card title="Consultoria de imagem (IA)" delay={300}>
+          <Card 
+            title="Consultoria de imagem (IA)" 
+            delay={300}
+            image={consultoriaIAImage}
+            imageAlt="Consultoria com inteligência artificial"
+          >
             <p>Visualize previamente sua peça com diferentes tecidos e composições.</p>
           </Card>
-          <Card title="Atendimento em outras cidades" delay={350}>
+          <Card 
+            title="Atendimento em outras cidades" 
+            delay={350}
+            image={outrasCidadesImage}
+            imageAlt="Atendimento em outras cidades"
+          >
             <p>Levamos a experiência Bespoke até você.</p>
           </Card>
         </div>
