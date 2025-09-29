@@ -25,6 +25,10 @@ import productColete from '@/assets/product-colete.jpg';
 import productBlazer from '@/assets/product-blazer.jpg';
 import productTerno from '@/assets/product-terno.jpg';
 import productTshirt from '@/assets/product-tshirt.jpg';
+import partnerAmperjImage from '@/assets/partners/amperj.png';
+import partnerAjuferjesImage from '@/assets/partners/ajuferjes.png';
+import partnerImbImage from '@/assets/partners/imb.jpg';
+
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -133,6 +137,31 @@ const Index = () => {
       imageClassName: 'object-center',
     },
   ] as const;
+
+  const partners = [
+    {
+      name: 'AMPERJ',
+      image: partnerAmperjImage,
+      website: 'https://www.amperj.org',
+      delay: 100,
+      imageAlt: 'Logotipo AMPERJ',
+    },
+    {
+      name: 'AJUFERJES',
+      image: partnerAjuferjesImage,
+      website: 'https://ajuferjes.org.br',
+      delay: 150,
+      imageAlt: 'Logotipo AJUFERJES',
+    },
+    {
+      name: 'IMB',
+      image: partnerImbImage,
+      website: 'https://imb.org.br',
+      delay: 200,
+      imageAlt: 'Logotipo Instituto dos Magistrados do Brasil',
+    },
+  ] as const;
+
 
   const experienceSteps = [
     {
@@ -302,6 +331,51 @@ const Index = () => {
       </Section>
 
       <Section
+        id="parceiros"
+        title="Parceiros que vestimos"
+        description="Parceiros institucionais que confiam na alfaiataria Thiago Assis Bespoke."
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {partners.map((partner) => (
+            <Card
+              key={partner.name}
+              title={partner.name}
+              delay={partner.delay}
+              image={partner.image}
+              imageAlt={partner.imageAlt}
+              imageClassName="h-40 w-full object-contain bg-white p-6"
+              className="text-center"
+            >
+              <div className="flex flex-col items-center gap-4">
+                <p className="text-white/75">Vestimos equipes e eventos de {partner.name} com alfaiataria personalizada.</p>
+                <a
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:border-white/30 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                >
+                  Visitar site
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section
         id="sobre"
         title="História da Empresa"
         description="A Thiago Assis Bespoke surge para atender apaixonados por alfaiataria e alta costura, com personalização absoluta e os melhores tecidos do mercado."
@@ -331,9 +405,35 @@ const Index = () => {
             <ul className="space-y-3 text-white/80">
               <li>(21) 98228-0245</li>
               <li>(21) 97900-8365</li>
-              <li>Rio de Janeiro — RJ</li>
+              <li>Rua da Quitanda 30 sala 708/712</li>
               <li>Seg à Sex, 9h às 19h (agendamento)</li>
             </ul>
+          </Card>
+
+          <Card title="Nossas redes" delay={180}>
+            <div className="space-y-6">
+              <p>Acompanhe as criações e bastidores no Instagram.</p>
+              <a
+                href="https://www.instagram.com/thiago.assis.alfaiataria?igsh=bDZ1YnZqMndnYXA4&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-gradient-to-br from-white/10 via-white/5 to-transparent text-white transition-all duration-300 hover:border-white/30 hover:from-white/20 hover:via-white/10 hover:to-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                aria-label="Instagram Thiago Assis Bespoke"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5 transition-transform duration-300 group-hover:scale-110"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                >
+                  <rect x={4.75} y={4.75} width={14.5} height={14.5} rx={4} />
+                  <circle cx={12} cy={12} r={3.25} />
+                  <circle cx={16.5} cy={7.5} r={0.75} fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+            </div>
           </Card>
         </div>
       </Section>
@@ -344,3 +444,7 @@ const Index = () => {
 };
 
 export default Index;
+
+
+
+

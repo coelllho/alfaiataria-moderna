@@ -1,4 +1,6 @@
-﻿const Footer = () => {
+﻿import logo from '@/assets/logo.png';
+
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -6,9 +8,11 @@
       <div className="container mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="font-playfair text-2xl font-bold text-white mb-4">
-              THIAGO ASSIS <span className="text-white">BESPOKE</span>
-            </h3>
+            <img
+              src={logo}
+              alt="Thiago Assis Bespoke"
+              className="h-12 w-auto mb-4 drop-shadow-[0_12px_36px_rgba(0,0,0,0.35)]"
+            />
             <p className="text-white/75 leading-relaxed">
               Alfaiataria sob medida com atendimento exclusivo e tecnologia de simulação por IA.
             </p>
@@ -45,7 +49,7 @@
               <li>(21) 98228-0245</li>
               <li>(21) 97900-8365</li>
               <li>contato@thiagoassisbespoke.com</li>
-              <li>Rio de Janeiro — RJ</li>
+              <li>Rio de Janeiro - RJ</li>
               <li>Seg à Sex, 9h às 19h (agendamento)</li>
             </ul>
           </div>
