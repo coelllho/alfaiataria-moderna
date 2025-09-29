@@ -21,10 +21,10 @@
     --popover-foreground: 249 250 251;
 
     /* Brand colors - Pure white */
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 4%;
-    --primary-glow: 0 0% 100%;
-    --primary-dark: 0 0% 90%;
+    --primary: 0 0% 12%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 0 0% 70%;
+    --primary-dark: 0 0% 4%;
 
     /* Secondary - Dark surface */
     --secondary: 0 0% 6%;
@@ -32,11 +32,11 @@
 
     /* Muted colors */
     --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 100%;
+    --muted-foreground: 0 0% 95%;
 
     /* Accent - Pure white */
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 4%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
 
     /* Status colors */
     --destructive: 0 84% 60%;
@@ -45,19 +45,19 @@
     --success-foreground: 0 0% 98%;
 
     /* Border and input */
-    --border: 0 0% 100%;
+    --border: 0 0% 20%;
     --input: 0 0% 10%;
-    --ring: 0 0% 100%;
+    --ring: 0 0% 65%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 95%));
+    --gradient-primary: linear-gradient(135deg, hsl(0 0% 96%), hsl(0 0% 88%));
     --gradient-dark: linear-gradient(135deg, hsl(0 0% 4%), hsl(0 0% 6%));
     --gradient-surface: linear-gradient(135deg, hsl(0 0% 10% / 0.8), hsl(0 0% 10% / 0.9));
     --gradient-hero: linear-gradient(135deg, hsl(0 0% 4% / 0.7), hsl(0 0% 10% / 0.3));
 
     /* Shadows - Original project shadows */
     --shadow-luxury: 0 20px 45px rgba(0, 0, 0, 0.28);
-    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.1);
+    --shadow-glow: 0 0 40px rgba(255, 255, 255, 0.08);
     --shadow-card: 0 20px 45px rgba(0, 0, 0, 0.28);
 
     /* Animations */

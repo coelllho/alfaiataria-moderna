@@ -1,6 +1,16 @@
-import { useState, useEffect } from 'react';
+﻿import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import logo from '@/assets/logo.png';
+
+const NAV_ITEMS = [
+  { id: 'diferenciais', label: 'Diferenciais' },
+  { id: 'servicos', label: 'Serviços' },
+  { id: 'produtos', label: 'Produtos' },
+  { id: 'experiencia', label: 'Experiência' },
+  { id: 'agendamento', label: 'Agendamentos' },
+  { id: 'sobre', label: 'História' },
+  { id: 'contato', label: 'Contato' },
+] as const;
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,7 +19,7 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -20,11 +30,9 @@ const Header = () => {
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'glass border-b border-white/10' 
-          : 'bg-transparent'
+        isScrolled ? 'glass border-b border-white/10 backdrop-blur-xl' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
@@ -38,19 +46,11 @@ const Header = () => {
           </button>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            {[
-              { id: 'sobre', label: 'História' },
-              { id: 'servicos', label: 'Serviços' },
-              { id: 'diferenciais', label: 'Diferenciais' },
-              { id: 'produtos', label: 'Produtos' },
-              { id: 'experiencia', label: 'Experiência' },
-              { id: 'agendamento', label: 'Agendamento' },
-              { id: 'contato', label: 'Contato' },
-            ].map((item) => (
+            {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 uppercase tracking-wider"
+                className="text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 uppercase tracking-wider"
               >
                 {item.label}
               </button>
@@ -59,7 +59,7 @@ const Header = () => {
 
           <Button
             variant="outline"
-            className="border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            className="border-white/40 text-white hover:bg-white/10 hover:text-white transition-all duration-300"
             onClick={() => scrollToSection('agendamento')}
           >
             Agendar
