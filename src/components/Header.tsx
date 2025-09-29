@@ -60,7 +60,7 @@ const Header = () => {
           <Button
             variant="outline"
             className="border-white/40 text-white hover:bg-white/10 hover:text-white transition-all duration-300"
-            onClick={() => scrollToSection('agendamento')}
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScA8b_vG7SZrBXx37JhEbte4TIG0-Wmss-my_EGnZWm7Q9ebQ/viewform?usp=dialog', '_blank')}
           >
             Agendar
           </Button>

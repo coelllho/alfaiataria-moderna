@@ -294,7 +294,7 @@ const Index = () => {
           <Button
             size="lg"
             className="bg-white/15 text-white hover:bg-white/25 transition-all duration-300"
-            onClick={() => scrollToSection('contato')}
+            onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLScA8b_vG7SZrBXx37JhEbte4TIG0-Wmss-my_EGnZWm7Q9ebQ/viewform?usp=dialog', '_blank')}
           >
             Agendar atendimento
           </Button>
